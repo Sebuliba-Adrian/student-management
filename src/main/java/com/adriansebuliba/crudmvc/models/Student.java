@@ -1,6 +1,8 @@
 package com.adriansebuliba.crudmvc.models;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import org.springframework.format.annotation.DateTimeFormat;
@@ -9,7 +11,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 public class Student {
 	
 	@Id
-	private Integer id;
+	private Integer Id;
 	private String name;
 	private String department;
 	private String updatedBy;
@@ -24,7 +26,7 @@ public class Student {
 
 	public Student(Integer id, String name, String department, String updatedBy, String updatedOn) {
 		super();
-		this.id = id;
+		this.Id = id;
 		this.name = name;
 		this.department = department;
 		this.updatedBy = updatedBy;
@@ -32,11 +34,11 @@ public class Student {
 	}
 
 	public Integer getId() {
-		return id;
+		return Id;
 	}
 
 	public void setId(Integer id) {
-		this.id = id;
+		this.Id = id;
 	}
 
 	public String getName() {
